@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nome: MyString
+  natureza: MyString
+  historico: MyText
+  codigo_contabil: MyString
+  companyprovider: one
+  user: one
+
+two:
+  nome: MyString
+  natureza: MyString
+  historico: MyText
+  codigo_contabil: MyString
+  companyprovider: two
+  user: two

@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @accountfinancial.nome %>
+</p>
+
+<p>
+  <strong>Natureza:</strong>
+  <%= @accountfinancial.natureza %>
+</p>
+
+<p>
+  <strong>Historico:</strong>
+  <%= @accountfinancial.historico %>
+</p>
+
+<p>
+  <strong>Codigo contabil:</strong>
+  <%= @accountfinancial.codigo_contabil %>
+</p>
+
+<p>
+  <strong>Companyprovider:</strong>
+  <%= @accountfinancial.companyprovider %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @accountfinancial.user %>
+</p>
+
+<%= link_to 'Edit', edit_accountfinancial_path(@accountfinancial) %> |
+<%= link_to 'Back', accountfinancials_path %>

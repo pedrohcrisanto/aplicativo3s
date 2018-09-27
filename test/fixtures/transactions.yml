@@ -1,0 +1,37 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  typepayment: one
+  company: one
+  companyprovider: one
+  accountfinancial: one
+  accountbank: one
+  doctype: one
+  category: one
+  data_vencimento: 2018-09-26
+  data_baixa: 2018-09-26
+  historico: MyText
+  valor_operacao: 9.99
+  valor_acrescimo: 9.99
+  valor_desconto: 9.99
+  valor_liquido: 9.99
+  user: one
+  documents: 
+
+two:
+  typepayment: two
+  company: two
+  companyprovider: two
+  accountfinancial: two
+  accountbank: two
+  doctype: two
+  category: two
+  data_vencimento: 2018-09-26
+  data_baixa: 2018-09-26
+  historico: MyText
+  valor_operacao: 9.99
+  valor_acrescimo: 9.99
+  valor_desconto: 9.99
+  valor_liquido: 9.99
+  user: two
+  documents: 

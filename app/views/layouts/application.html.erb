@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+
+
+
+    <title>App3s</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed">
+          <span class="sr-only"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">3S Soluções Contábeis</a>
+      </div>
+
+    
+
+  <p class="navbar-text pull-right">
+  <% if user_signed_in? %>
+  Logado como: 
+  <strong><%= current_user.email %></strong>.
+  <%= link_to 'Editar perfil', edit_user_registration_path, :class => 'navbar-link' %> |
+  <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+  <% end %>
+  </div>  
+
+
+
+  </head>
+
+<body>
+<div>
+<% if notice %>
+<div class="alert alert-success alert-dismissable">
+<button type="button" class="close" data-dismiss="alert"
+aria-hidden="true"></button>
+<%= notice %>
+</div>
+<% end %>
+
+<% if alert %>
+<div class="alert alert-danger"><%= alert %></div>
+<% end %>
+</div>
+  <main>
+  <div class="container">
+    <div class="row">
+      <%= yield %>
+    </div>
+  </div>
+  </main>
+
+  <footer id="footer" class="navbar-default">
+    <div class="container">
+      <div class="row text-center">
+        <p>&copy; Todos os Direitos Reservados</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

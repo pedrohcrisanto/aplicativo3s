@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @companyprovider.nome %>
+</p>
+
+<p>
+  <strong>Cnpj:</strong>
+  <%= @companyprovider.cnpj %>
+</p>
+
+<p>
+  <strong>Codigo contabil cliente:</strong>
+  <%= @companyprovider.codigo_contabil_cliente %>
+</p>
+
+<p>
+  <strong>Codigo contabil fornecedor:</strong>
+  <%= @companyprovider.codigo_contabil_fornecedor %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @companyprovider.user %>
+</p>
+
+<%= link_to 'Edit', edit_companyprovider_path(@companyprovider) %> |
+<%= link_to 'Back', companyproviders_path %>

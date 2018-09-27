@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Accountbanks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Banco</th>
+      <th>Agencia</th>
+      <th>Conta corrente</th>
+      <th>Codigo contabil</th>
+      <th>Company</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @accountbanks.each do |accountbank| %>
+      <tr>
+        <td><%= accountbank.nome %></td>
+        <td><%= accountbank.banco %></td>
+        <td><%= accountbank.agencia %></td>
+        <td><%= accountbank.conta_corrente %></td>
+        <td><%= accountbank.codigo_contabil %></td>
+        <td><%= accountbank.company %></td>
+        <td><%= accountbank.user %></td>
+        <td><%= link_to 'Show', accountbank %></td>
+        <td><%= link_to 'Edit', edit_accountbank_path(accountbank) %></td>
+        <td><%= link_to 'Destroy', accountbank, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Accountbank', new_accountbank_path %>

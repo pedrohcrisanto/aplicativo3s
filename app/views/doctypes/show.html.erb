@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @doctype.nome %>
+</p>
+
+<p>
+  <strong>Descricao:</strong>
+  <%= @doctype.descricao %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @doctype.user %>
+</p>
+
+<%= link_to 'Edit', edit_doctype_path(@doctype) %> |
+<%= link_to 'Back', doctypes_path %>

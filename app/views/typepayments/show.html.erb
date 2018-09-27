@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @typepayment.nome %>
+</p>
+
+<p>
+  <strong>Descricao:</strong>
+  <%= @typepayment.descricao %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @typepayment.user %>
+</p>
+
+<%= link_to 'Edit', edit_typepayment_path(@typepayment) %> |
+<%= link_to 'Back', typepayments_path %>

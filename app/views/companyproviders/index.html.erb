@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Companyproviders</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Cnpj</th>
+      <th>Codigo contabil cliente</th>
+      <th>Codigo contabil fornecedor</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @companyproviders.each do |companyprovider| %>
+      <tr>
+        <td><%= companyprovider.nome %></td>
+        <td><%= companyprovider.cnpj %></td>
+        <td><%= companyprovider.codigo_contabil_cliente %></td>
+        <td><%= companyprovider.codigo_contabil_fornecedor %></td>
+        <td><%= companyprovider.user %></td>
+        <td><%= link_to 'Show', companyprovider %></td>
+        <td><%= link_to 'Edit', edit_companyprovider_path(companyprovider) %></td>
+        <td><%= link_to 'Destroy', companyprovider, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Companyprovider', new_companyprovider_path %>

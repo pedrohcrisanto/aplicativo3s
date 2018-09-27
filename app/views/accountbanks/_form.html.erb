@@ -1,0 +1,52 @@
+<%= form_with(model: accountbank, local: true) do |form| %>
+  <% if accountbank.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(accountbank.errors.count, "error") %> prohibited this accountbank from being saved:</h2>
+
+      <ul>
+      <% accountbank.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nome %>
+    <%= form.text_field :nome %>
+  </div>
+
+  <div class="field">
+    <%= form.label :banco %>
+    <%= form.text_field :banco %>
+  </div>
+
+  <div class="field">
+    <%= form.label :agencia %>
+    <%= form.text_field :agencia %>
+  </div>
+
+  <div class="field">
+    <%= form.label :conta_corrente %>
+    <%= form.text_field :conta_corrente %>
+  </div>
+
+  <div class="field">
+    <%= form.label :codigo_contabil %>
+    <%= form.text_field :codigo_contabil %>
+  </div>
+
+  <div class="field">
+    <%= form.label :company_id %>
+    <%= form.text_field :company_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

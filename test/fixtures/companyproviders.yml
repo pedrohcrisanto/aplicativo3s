@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nome: MyString
+  cnpj: MyString
+  codigo_contabil_cliente: MyString
+  codigo_contabil_fornecedor: MyString
+  user: one
+
+two:
+  nome: MyString
+  cnpj: MyString
+  codigo_contabil_cliente: MyString
+  codigo_contabil_fornecedor: MyString
+  user: two

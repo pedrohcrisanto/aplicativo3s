@@ -1,5 +1,5 @@
 <% @transactions.each do |transaction| %>
-    <%= transaction.company.codigo_contabil %><%= transaction.company.cnpj%><%= transaction.data_baixa %>N0512340000017
+    <%= transaction.company.codigo_contabil %><%= transaction.company.cnpj%><%= transaction.calcula_datas_max %><%= transaction.calcula_datas_min %>N0512340000017
     21<%= transaction.data_baixa %>
     32
 <% end %>

@@ -4,7 +4,9 @@ class TransactionsController < ApplicationController
   # GET /transactions
   # GET /transactions.json
   def index
-    
+    datas = Transaction.pluck :data_baixa
+    min = datas.min
+    max = datas.max
     @transactions = Transaction.where(user_id: current_user.id).order('company_id')
     respond_to do |format|
       format.html

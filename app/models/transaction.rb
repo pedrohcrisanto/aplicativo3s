@@ -13,9 +13,20 @@ class Transaction < ApplicationRecord
   def calcula_valor_liquido()
     return (valor_operacao + valor_acrescimo)- valor_desconto
   end
- 
+    
 
-  def self.to_csv(options = {})
+
+  def calcula_datas_max()
+    datas = Transaction.pluck :data_baixa
+    return datas.max
+  end
+
+  def calcula_datas_min()
+    datas = Transaction.pluck :data_baixa
+    return datas.min
+  end
+  
+    def self.to_csv(options = {})
     CSV.generate(options) do |csv|
       csv << column_names
       all.each do |transaction|

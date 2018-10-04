@@ -1,6 +1,6 @@
 <% @transactions.each do |transaction| %>
     <%= transaction.company.codigo_contabil %><%= transaction.company.cnpj%><%= transaction.calcula_datas_max %><%= transaction.calcula_datas_min %>N0512340000017
     21<%= transaction.data_baixa %>
-    32
+    32<%= transaction.typepayment.nome == 'Recebimento' ?(transaction.accountbank.codigo_contabil) : ('XXXXX') %><%= transaction.typepayment.nome == 'Pagamento' ?(transaction.accountbank.codigo_contabil) : ('XXXXX')%><%=transaction.calcula_valor_liquido %>000<%=transaction.historico %><%=transaction.company.codigo_contabil %>
 <% end %>
 

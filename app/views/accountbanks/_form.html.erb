@@ -10,43 +10,39 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
+  <div class="box box-primary container box-body">
+  <div class="form-row">
+  <div class="form-group col-md-12">
     <%= form.label :nome %>
-    <%= form.text_field :nome %>
+    <%= form.text_field :nome , class: "form-control"%>
   </div>
 
-  <div class="field">
+  <div class="form-group col-md-12">
     <%= form.label :banco %>
-    <%= form.text_field :banco %>
+    <%= form.text_field :banco , class: "form-control"%>
   </div>
 
-  <div class="field">
+  <div class="form-group col-md-12">
     <%= form.label :agencia %>
-    <%= form.text_field :agencia %>
+    <%= form.text_field :agencia , class: "form-control"%>
   </div>
 
-  <div class="field">
+  <div class="form-group col-md-12">
     <%= form.label :conta_corrente %>
-    <%= form.text_field :conta_corrente %>
+    <%= form.text_field :conta_corrente, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group col-md-12">
     <%= form.label :codigo_contabil %>
-    <%= form.text_field :codigo_contabil %>
+    <%= form.text_field :codigo_contabil , class: "form-control"%>
   </div>
 
-  <div class="field">
+  <div class="form-group col-md-12">
     <%= form.label :company_id %>
-    <%= form.text_field :company_id %>
+    <%= form.collection_select :company_id , Company.where(user_id: current_user.id), :id, :nome, {}, class: "form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :user_id %>
-    <%= form.text_field :user_id %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
+  <div class="box-footer text-center">
+    <%= form.submit  "Cadastrar" , class:'btn btn-success'%>
   </div>
 <% end %>

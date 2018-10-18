@@ -1,16 +1,17 @@
-<p id="notice"><%= notice %></p>
 
-<h1>Accountfinancials</h1>
 
-<table>
+<h1 class="text-center">Contas Financeiras</h1>
+
+<div class="box box-primary container box-body">
+<div class="table-responsive">
+<table class="table table-bordered table-hover table-striped float-left table-responsive">
   <thead>
     <tr>
       <th>Nome</th>
       <th>Natureza</th>
       <th>Historico</th>
       <th>Codigo contabil</th>
-      <th>Companyprovider</th>
-      <th>User</th>
+      <th>Company Fornecedora</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -22,11 +23,10 @@
         <td><%= accountfinancial.natureza %></td>
         <td><%= accountfinancial.historico %></td>
         <td><%= accountfinancial.codigo_contabil %></td>
-        <td><%= accountfinancial.companyprovider %></td>
-        <td><%= accountfinancial.user %></td>
-        <td><%= link_to 'Show', accountfinancial %></td>
-        <td><%= link_to 'Edit', edit_accountfinancial_path(accountfinancial) %></td>
-        <td><%= link_to 'Destroy', accountfinancial, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= accountfinancial.companyprovider.nome %></td>
+        <td class="col-xs-1"><%= link_to '', accountfinancial , class:'btn btn-info fa fa-2x fa-eye'%></td>
+        <td class="col-xs-1"><%= link_to '', edit_accountfinancial_path(accountfinancial) , class:'btn btn-primary fa fa-2x fa-edit'%></td>
+        <td class="col-xs-1"><%= link_to '', accountfinancial, method: :delete, data: { confirm: 'Tem certeza?' }  , class:'btn btn-danger fa fa-2x fa-trash'%></td>
       </tr>
     <% end %>
   </tbody>
@@ -34,4 +34,4 @@
 
 <br>
 
-<%= link_to 'New Accountfinancial', new_accountfinancial_path %>
+<%= link_to 'Nova Conta Financeira', new_accountfinancial_path , class:'btn btn-primary' %>

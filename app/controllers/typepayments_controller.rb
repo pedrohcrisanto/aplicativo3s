@@ -4,7 +4,7 @@ class TypepaymentsController < ApplicationController
   # GET /typepayments
   # GET /typepayments.json
   def index
-    @typepayments = Typepayment.all
+    @typepayments = Typepayment.where(user_id: current_user.id)
   end
 
   # GET /typepayments/1
@@ -24,7 +24,7 @@ class TypepaymentsController < ApplicationController
   # POST /typepayments
   # POST /typepayments.json
   def create
-    @typepayment = Typepayment.new(typepayment_params)
+    @typepayment = Typepayment.new(typepayment_params.merge(user: current_user))
 
     respond_to do |format|
       if @typepayment.save

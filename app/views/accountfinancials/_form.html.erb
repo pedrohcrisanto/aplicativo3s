@@ -11,37 +11,35 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="box box-primary container box-body">
+  <div class="form-row">
+  <div class="form-group col-md-12">
     <%= form.label :nome %>
-    <%= form.text_field :nome %>
+    <%= form.text_field :nome , class: "form-control"%>
   </div>
 
-  <div class="field">
+  <div class="form-group col-md-12">
     <%= form.label :natureza %>
-    <%= form.text_field :natureza %>
+    <%= form.text_field :natureza , class: "form-control"%>
   </div>
 
-  <div class="field">
+  <div class="form-group col-md-12">
     <%= form.label :historico %>
-    <%= form.text_area :historico %>
+    <%= form.text_area :historico , class: "form-control"%>
   </div>
 
-  <div class="field">
+  <div class="form-group col-md-12">
     <%= form.label :codigo_contabil %>
-    <%= form.text_field :codigo_contabil %>
+    <%= form.text_field :codigo_contabil , class: "form-control"%>
   </div>
 
-  <div class="field">
+  <div class="form-group col-md-12">
     <%= form.label :companyprovider_id %>
-    <%= form.text_field :companyprovider_id %>
+     <%= form.collection_select :companyprovider_id , Companyprovider.where(user_id: current_user.id), :id, :nome, {}, class: "form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :user_id %>
-    <%= form.text_field :user_id %>
-  </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="box-footer text-center">
+    <%= form.submit  "Cadastrar" , class:'btn btn-success'%>
   </div>
 <% end %>

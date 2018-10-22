@@ -1,29 +1,28 @@
-<p id="notice"><%= notice %></p>
-
+<div class="box box-primary container box-body">
 <p>
   <strong>Nome:</strong>
+  <br>
   <%= @companyprovider.nome %>
 </p>
 
 <p>
   <strong>Cnpj:</strong>
+  <br>
   <%= @companyprovider.cnpj %>
 </p>
 
 <p>
   <strong>Codigo contabil cliente:</strong>
+  <br>
   <%= @companyprovider.codigo_contabil_cliente %>
 </p>
 
 <p>
   <strong>Codigo contabil fornecedor:</strong>
+  <br>
   <%= @companyprovider.codigo_contabil_fornecedor %>
 </p>
+</div>
 
-<p>
-  <strong>User:</strong>
-  <%= @companyprovider.user %>
-</p>
-
-<%= link_to 'Edit', edit_companyprovider_path(@companyprovider) %> |
-<%= link_to 'Back', companyproviders_path %>
+<%= link_to 'Editar', edit_companyprovider_path(@companyprovider) , class:'btn btn-primary'%> 
+<%= link_to 'Voltar', companyproviders_path , class:'btn btn-primary'%>

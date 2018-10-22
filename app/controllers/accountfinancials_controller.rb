@@ -4,7 +4,7 @@ class AccountfinancialsController < ApplicationController
   # GET /accountfinancials
   # GET /accountfinancials.json
   def index
-    @accountfinancials = Accountfinancial.all
+    @accountfinancials = Accountfinancial.where(user_id: current_user.id)
   end
 
   # GET /accountfinancials/1
@@ -24,7 +24,7 @@ class AccountfinancialsController < ApplicationController
   # POST /accountfinancials
   # POST /accountfinancials.json
   def create
-    @accountfinancial = Accountfinancial.new(accountfinancial_params)
+    @accountfinancial = Accountfinancial.new(accountfinancial_params.merge(user: current_user))
 
     respond_to do |format|
       if @accountfinancial.save

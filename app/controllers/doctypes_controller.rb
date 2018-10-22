@@ -4,7 +4,7 @@ class DoctypesController < ApplicationController
   # GET /doctypes
   # GET /doctypes.json
   def index
-    @doctypes = Doctype.all
+    @doctypes = Doctype.where(user_id: current_user.id)
   end
 
   # GET /doctypes/1
@@ -24,7 +24,7 @@ class DoctypesController < ApplicationController
   # POST /doctypes
   # POST /doctypes.json
   def create
-    @doctype = Doctype.new(doctype_params)
+    @doctype = Doctype.new(doctype_params.merge(user: current_user))
 
     respond_to do |format|
       if @doctype.save

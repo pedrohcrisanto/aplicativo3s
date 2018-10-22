@@ -1,7 +1,7 @@
 <%= form_with(model: typepayment, local: true) do |form| %>
   <% if typepayment.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(typepayment.errors.count, "error") %> prohibited this typepayment from being saved:</h2>
+      <h2><%= pluralize(typepayment.errors.count, "error") %> prohibited this type from being saved:</h2>
 
       <ul>
       <% typepayment.errors.full_messages.each do |message| %>
@@ -10,23 +10,21 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
+  <div class="box box-primary container box-body">
+  <div class="form-row">
+  <div class="form-group col-md-12">
     <%= form.label :nome %>
-    <%= form.text_field :nome %>
+    <%= form.text_field :nome , class: "form-control"%>
   </div>
 
-  <div class="field">
+  <div class="form-group col-md-12">
     <%= form.label :descricao %>
-    <%= form.text_area :descricao %>
+    <%= form.text_area :descricao , class: "form-control"%>
   </div>
 
-  <div class="field">
-    <%= form.label :user_id %>
-    <%= form.text_field :user_id %>
+  <div class="box-footer text-center">
+    <%= form.submit "Cadastrar" , class:'btn btn-success'%>
   </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+</div>
+</div>
 <% end %>

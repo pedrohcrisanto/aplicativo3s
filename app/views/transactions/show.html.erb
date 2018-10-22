@@ -1,84 +1,93 @@
-<p id="notice"><%= notice %></p>
-
+<div class="box box-primary container box-body">
 <p>
   <strong>Typepayment:</strong>
-  <%= @transaction.typepayment %>
+  <br>
+  <%= @transaction.typepayment.nome %>
 </p>
 
 <p>
   <strong>Company:</strong>
-  <%= @transaction.company %>
+  <br>
+  <%= @transaction.company.nome %>
 </p>
 
 <p>
   <strong>Companyprovider:</strong>
-  <%= @transaction.companyprovider %>
+  <br>
+  <%= @transaction.companyprovider.nome %>
 </p>
 
 <p>
   <strong>Accountfinancial:</strong>
-  <%= @transaction.accountfinancial %>
+  <br>
+  <%= @transaction.accountfinancial.nome %>
 </p>
 
 <p>
   <strong>Accountbank:</strong>
-  <%= @transaction.accountbank %>
+  <br>
+  <%= @transaction.accountbank.nome %>
 </p>
 
 <p>
   <strong>Doctype:</strong>
-  <%= @transaction.doctype %>
+  <br>
+  <%= @transaction.doctype.nome %>
 </p>
 
 <p>
   <strong>Category:</strong>
-  <%= @transaction.category %>
+  <br>
+  <%= @transaction.category.nome %>
 </p>
 
 <p>
   <strong>Data vencimento:</strong>
+  <br>
   <%= @transaction.data_vencimento %>
 </p>
 
 <p>
   <strong>Data baixa:</strong>
+  <br>
   <%= @transaction.data_baixa %>
 </p>
 
 <p>
   <strong>Historico:</strong>
+  <br>
   <%= @transaction.historico %>
 </p>
 
 <p>
   <strong>Valor operacao:</strong>
+  <br>
   <%= @transaction.valor_operacao %>
 </p>
 
 <p>
   <strong>Valor acrescimo:</strong>
+  <br>
   <%= @transaction.valor_acrescimo %>
 </p>
 
 <p>
   <strong>Valor desconto:</strong>
+  <br>
   <%= @transaction.valor_desconto %>
 </p>
 
 <p>
   <strong>Valor liquido:</strong>
-  <%= @transaction.valor_liquido %>
+  <br>
+  <%= @transaction.calcula_valor_liquido %>
 </p>
 
-<p>
-  <strong>User:</strong>
-  <%= @transaction.user %>
-</p>
-
-<p>
-  <strong>Documents:</strong>
-  <%= @transaction.documents %>
-</p>
-
-<%= link_to 'Edit', edit_transaction_path(@transaction) %> |
-<%= link_to 'Back', transactions_path %>
+<h4>Documentos:</h4>
+<% @transaction.documents.each_with_index do |document, index| %>
+  <%= link_to("Anexo #{index + 1} ", document.url, target: '_blank') %>
+  <br />
+<% end %>
+</div>
+<%= link_to 'Editar', edit_transaction_path(@transaction) , class:'btn btn-primary'%> 
+<%= link_to 'Voltar', transactions_path , class:'btn btn-primary'%>

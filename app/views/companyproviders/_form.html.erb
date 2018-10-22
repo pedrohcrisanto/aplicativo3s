@@ -10,33 +10,31 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
+  <div class="box box-primary container box-body">
+  <div class="form-row">
+  <div class="form-group col-md-12">
     <%= form.label :nome %>
-    <%= form.text_field :nome %>
+    <%= form.text_field :nome  , class: "form-control"%>
   </div>
 
-  <div class="field">
+  <div class="form-group col-md-12">
     <%= form.label :cnpj %>
-    <%= form.text_field :cnpj %>
+    <%= form.text_field :cnpj  , class: "form-control"%>
   </div>
 
-  <div class="field">
+  <div class="form-group col-md-12">
     <%= form.label :codigo_contabil_cliente %>
-    <%= form.text_field :codigo_contabil_cliente %>
+    <%= form.text_field :codigo_contabil_cliente , class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group col-md-12">
     <%= form.label :codigo_contabil_fornecedor %>
-    <%= form.text_field :codigo_contabil_fornecedor %>
+    <%= form.text_field :codigo_contabil_fornecedor , class: "form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :user_id %>
-    <%= form.text_field :user_id %>
+
+  <div class="box-footer text-center">
+    <%= form.submit "Cadastrar", class:'btn btn-success'%>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
 <% end %>

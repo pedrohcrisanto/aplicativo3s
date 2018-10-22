@@ -1,5 +1,4 @@
-<p id="notice"><%= notice %></p>
-
+<div class="box box-primary container box-body">
 <p>
   <strong>Nome:</strong>
   <%= @typepayment.nome %>
@@ -10,10 +9,6 @@
   <%= @typepayment.descricao %>
 </p>
 
-<p>
-  <strong>User:</strong>
-  <%= @typepayment.user %>
-</p>
-
-<%= link_to 'Edit', edit_typepayment_path(@typepayment) %> |
-<%= link_to 'Back', typepayments_path %>
+</div>
+<%= link_to 'Editar', edit_typepayment_path(@typepayment) , class:'btn btn-primary'%> 
+<%= link_to 'Voltar', typepayments_path , class:'btn btn-primary'%>

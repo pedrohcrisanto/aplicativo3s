@@ -1,5 +1,4 @@
-<p id="notice"><%= notice %></p>
-
+<div class="box box-primary container box-body">
 <p>
   <strong>Nome:</strong>
   <%= @doctype.nome %>
@@ -9,11 +8,6 @@
   <strong>Descricao:</strong>
   <%= @doctype.descricao %>
 </p>
-
-<p>
-  <strong>User:</strong>
-  <%= @doctype.user %>
-</p>
-
-<%= link_to 'Edit', edit_doctype_path(@doctype) %> |
-<%= link_to 'Back', doctypes_path %>
+</div>
+<%= link_to 'Editar', edit_doctype_path(@doctype), class:'btn btn-primary' %> 
+<%= link_to 'Voltar', doctypes_path, class:'btn btn-primary' %>

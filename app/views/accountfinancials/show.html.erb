@@ -1,34 +1,33 @@
-<p id="notice"><%= notice %></p>
-
+<div class="box box-primary container box-body">
 <p>
   <strong>Nome:</strong>
+  <br>
   <%= @accountfinancial.nome %>
 </p>
 
 <p>
   <strong>Natureza:</strong>
+  <br>
   <%= @accountfinancial.natureza %>
 </p>
 
 <p>
   <strong>Historico:</strong>
+  <br>
   <%= @accountfinancial.historico %>
 </p>
 
 <p>
   <strong>Codigo contabil:</strong>
+  <br>
   <%= @accountfinancial.codigo_contabil %>
 </p>
 
 <p>
   <strong>Companyprovider:</strong>
-  <%= @accountfinancial.companyprovider %>
+  <br>
+  <%= @accountfinancial.companyprovider.nome %>
 </p>
-
-<p>
-  <strong>User:</strong>
-  <%= @accountfinancial.user %>
-</p>
-
-<%= link_to 'Edit', edit_accountfinancial_path(@accountfinancial) %> |
-<%= link_to 'Back', accountfinancials_path %>
+</div>
+<%= link_to 'Editar', edit_accountfinancial_path(@accountfinancial) , class:'btn btn-primary'%> 
+<%= link_to 'Voltar', accountfinancials_path, class:'btn btn-primary' %>

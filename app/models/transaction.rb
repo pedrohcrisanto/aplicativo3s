@@ -14,7 +14,10 @@ class Transaction < ApplicationRecord
     return (valor_operacao + valor_acrescimo)- valor_desconto
   end
     
-
+  def incremento()
+    count = 0
+    return count
+  end
 
   def calcula_datas_max()
     datas = Transaction.pluck :data_baixa

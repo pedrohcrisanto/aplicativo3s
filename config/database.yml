@@ -81,5 +81,5 @@ test:
 production:
   <<: *default
   database: app3s_production
-  username: app3s
+  username: pedro
   password: <%= ENV['APP3S_DATABASE_PASSWORD'] %>
